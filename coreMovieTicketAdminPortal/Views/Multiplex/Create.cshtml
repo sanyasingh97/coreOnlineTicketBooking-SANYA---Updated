@@ -1,0 +1,33 @@
+﻿@model coreMovieTicketAdminPortal.Models.Multiplex
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2><b>CREATE</b></h2>
+<br />
+@*<form asp-action="Create" asp-controller="Multiplex">
+    <label asp-for="MultiplexName"></label>
+    <input type="text" asp-for="MultiplexName" />
+
+    <label asp-for="MultiplexDescription"></label>
+    <input type="text" asp-for="MultiplexDescription" />
+    <br />
+    <input type="submit" value="Create Multiplex" />
+
+</form>*@
+
+<form asp-action="Create" asp-controller="Multiplex">
+    <div class="form-group">
+        <label asp-for="MultiplexName"><b>Movie Name</b></label>
+        <input type="text" class="form-control" asp-for="MultiplexName" placeholder="Enter Multiplex Name">
+
+        <label asp-for="MultiplexDescription"><b>Movie Description</b></label>
+        <input type="text" class="form-control" asp-for="MultiplexDescription" placeholder="Enter Multiplex Description">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    @*@Html.ActionLink("back to list", "Index")*@
+    <a asp-controller="Multiplex" asp-action="Index" class="btn btn-light"><b>Back To List</b></a>
+</form>
+

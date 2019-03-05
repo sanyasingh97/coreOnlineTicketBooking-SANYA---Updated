@@ -1,0 +1,32 @@
+﻿@model coreMovieTicketAdminPortal.Models.Movie
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3><b>CREATE</b></h3>
+<br/>
+<form asp-action="Create" asp-controller="Movie">
+    <div class="form-group">
+        <label asp-for="MovieName"><b>Movie Name</b></label>
+        <input type="text" class="form-control" asp-for="MovieName" placeholder="Enter Movie Name">
+
+        <label asp-for="MovieDescription"><b>Movie Description</b></label>
+        <input type="text" class="form-control" asp-for="MovieDescription" placeholder="Enter Movie Description">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    @*@Html.ActionLink("back to list", "Index")*@
+    <a asp-controller="Movie" asp-action="Index" class="btn btn-light"><b>Back To List</b></a>
+</form>
+
+
+@*<form asp-action="Create" asp-controller="Movie">
+    <label asp-for="MovieName"></label>
+    <input type="text" asp-for="MovieName" />
+
+    <br />
+    <input type="submit" value="Create Movie" />
+
+</form>*@
+

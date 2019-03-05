@@ -1,0 +1,37 @@
+﻿@model coreMovieTicketAdminPortal.Models.Auditorium
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2><b>CREATE</b></h2>
+<br />
+@*<form asp-action="Create" asp-controller="Auditorium">
+    <label asp-for="AuditoriumName"></label>
+    <input type="text" asp-for="AuditoriumName" />
+
+    <label asp-for="AuditoriumDescription"></label>
+    <input type="text" asp-for="AuditoriumDescription" />
+
+    <label asp-for="Seats"></label>
+    <input type="text" asp-for="Seats" />
+
+    <br />
+    <input type="submit" value="Create Auditorium" />
+
+</form>*@
+
+<form asp-action="Create" asp-controller="Auditorium">
+    <div class="form-group">
+        <label for="AuditoriumName"><b>Auditorium Name</b></label>
+        <input type="text" asp-for="AuditoriumName" class="form-control" placeholder="Enter Auditorium Name">
+        <label for="AuditoriumDescription"><b>Auditorium Description</b></label>
+        <input type="text" asp-for="AuditoriumDescription" class="form-control" placeholder="Enter Auditorium Description">
+        <label for="Seats"><b>Seats</b></label>
+        <input type="text" asp-for="Seats" class="form-control" placeholder="Enter No.of Seats">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    @*@Html.ActionLink("back to list", "Index")*@
+    <a asp-controller="Auditorium" asp-action="Index" class="btn btn-light"><b>Back To List</b></a>
+</form>

@@ -1,0 +1,35 @@
+﻿@model coreMovieTicketAdminPortal.Models.Auditorium
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2><b>EDIT</b></h2>
+<br />
+<form asp-action="Edit" asp-controller="Auditorium">
+    <div class="form-group">
+        <label asp-for="AuditoriumName"><b>Auditorium Name</b></label>
+        <input type="text" class="form-control" asp-for="AuditoriumName" placeholder="Enter Auditorium Name">
+
+        <label asp-for="AuditoriumDescription"><b>Auditorium Description</b></label>
+        <input type="text" class="form-control" asp-for="AuditoriumDescription" placeholder="Enter Auditorium Description">
+
+        <label asp-for="Seats"><b>Seats</b></label>
+        <input type="text" class="form-control" asp-for="Seats" placeholder="Enter Seats">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-controller="Auditorium" asp-action="Index" class="btn btn-light"><b>Back To List</b></a>
+</form>
+
+@*@using (Html.BeginForm("Edit", "Auditorium", FormMethod.Post))
+{
+
+    @Html.LabelFor(model => model.AuditoriumName)
+    @Html.EditorFor(model => model.AuditoriumName)
+    <br />
+
+
+    <br />
+    <input type="submit" value="Edit Auditorium" />*@
+    

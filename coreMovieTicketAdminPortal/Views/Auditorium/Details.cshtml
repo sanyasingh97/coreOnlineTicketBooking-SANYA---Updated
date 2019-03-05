@@ -1,0 +1,41 @@
+﻿@model coreMovieTicketAdminPortal.Models.Auditorium
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2><b>Auditorium Details</b></h2>
+<br />
+
+@*@Html.DisplayNameFor(model => model.AuditoriumId);
+    @Html.DisplayFor(model => model.AuditoriumId);
+    <br />
+
+    @Html.DisplayNameFor(model => model.AuditoriumName);
+    @Html.DisplayFor(model => model.AuditoriumName);
+    <br />
+
+    @Html.DisplayNameFor(model => model.AuditoriumDescription);
+    @Html.DisplayFor(model => model.AuditoriumDescription);
+    <br />
+
+    @Html.DisplayNameFor(model => model.Seats);
+    @Html.DisplayFor(model => model.Seats);
+    <br />*@
+
+<div class="col-md-12">
+    <div class="card" ;">
+        <ul class="list-group list-group-flush">
+
+            <li class="list-group-item"><b>@Html.DisplayNameFor(model => model.AuditoriumName)</b>: @Html.DisplayFor(model => model.AuditoriumName)</li>
+            <li class="list-group-item"><b>@Html.DisplayNameFor(model => model.AuditoriumDescription)</b>: @Html.DisplayFor(model => model.AuditoriumDescription)</li>
+            <li class="list-group-item"><b>@Html.DisplayNameFor(model => model.Seats)</b>: @Html.DisplayFor(model => model.Seats)</li>
+
+        </ul>
+    </div>
+    </div>
+    <br />
+
+    <div class="col-md-12">
+        <a asp-controller="Auditorium" asp-action="Index" class="btn btn-primary">Back To List</a>
+        </div>
